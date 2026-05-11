@@ -9,8 +9,18 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C2FF&center=true&vCenter=true&width=500&lines=Welcome+to+our+Graduation+Project!;AI+for+Skin+Cancer+Detection;From+Image+→+Diagnosis;Built+with+Computer+Vision+%F0%9F%94%AC" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C2FF&center=true&vCenter=true&width=500&lines=Welcome+to+our+Graduation+Project!;AI+for+Skin+Cancer+Detection;From+Image+→+Diagnosis;Built+with+Computer+Vision" />
 </p>
+
+---
+
+## 📌 Quick Navigation
+
+* [🚀 Welcome](#-welcome)
+* [🧠 Pipeline](#-pipeline-architecture)
+* [📁 Structure](#-project-structure)
+* [⚙️ Modules](#️-system-modules)
+* [🛠️ Tech](#️-technologies-used)
 
 ---
 
@@ -18,38 +28,30 @@
 
 ✨ **Welcome to our Graduation Project repository!**
 
-This project presents a **complete AI-powered pipeline** for detecting skin cancer from dermoscopic images.
+This project builds a **complete AI pipeline** for detecting skin cancer from images.
 
-💡 Our goal:
-
-> Use **Artificial Intelligence** to assist in **early diagnosis** and potentially save lives.
-
----
-
-## 📌 Project Overview
-
-Skin cancer is one of the most common and dangerous diseases worldwide.
-
-This system processes an image through **4 intelligent stages**:
-
-➡️ From raw image
-➡️ To cleaned lesion
-➡️ To extracted features
-➡️ To final diagnosis
+> 💡 *Goal: Help early diagnosis using AI.*
 
 ---
 
 ## 🧠 Pipeline Architecture
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STEP%201-Segmentation-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/STEP%202-Cleaning-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/STEP%203-Feature%20Extraction-orange?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/STEP%204-Classification-red?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Image-Input-lightgrey?style=for-the-badge"/>
+  →
+  <img src="https://img.shields.io/badge/Segmentation-blue?style=for-the-badge"/>
+  →
+  <img src="https://img.shields.io/badge/Cleaning-green?style=for-the-badge"/>
+  →
+  <img src="https://img.shields.io/badge/Features-orange?style=for-the-badge"/>
+  →
+  <img src="https://img.shields.io/badge/Classification-red?style=for-the-badge"/>
+  →
+  <img src="https://img.shields.io/badge/Diagnosis-black?style=for-the-badge"/>
 </p>
 
 ```
-🖼️ Image → ✂️ Segmentation → 🧹 Cleaning → 📊 Features → 🤖 Classification → 📋 Result
+🖼️ → ✂️ → 🧹 → 📊 → 🤖 → 📋
 ```
 
 ---
@@ -59,108 +61,131 @@ This system processes an image through **4 intelligent stages**:
 ```bash
 skin-cancer-detection/
 │
-├── 1_segmentation/          # Lesion detection
+├── segmentation/
 │   └── segmentation.py
 │
-├── 2_cleaning/              # Noise & artifact removal
+├── cleaning/
 │   └── cleaning.py
 │
-├── 3_feature_extraction/    # ABCD + texture features
+├── feature_extraction/
 │   └── feature_extraction.py
 │
-├── 4_classification/        # ML/DL model
+├── classification/
 │   └── classification.py
 │
-├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## ⚙️ System Modules
+## ⚙️ System Modules (Click to Expand)
 
-### 🟦 1. Segmentation
+<details>
+<summary>🟦 Segmentation</summary>
 
 * Detects lesion boundaries
-* Separates cancer area from healthy skin
-* Techniques:
+* Separates lesion from skin
+* Methods:
 
   * Thresholding
   * Contours
-  * Deep Learning (U-Net)
+  * U-Net
+
+📊 Progress:
+
+```
+██████████░░░░░░ 60%
+```
+
+</details>
 
 ---
 
-### 🟩 2. Cleaning
+<details>
+<summary>🟩 Cleaning</summary>
 
 * Removes:
 
   * Hair 🧵
   * Noise ⚡
-  * Reflections ✨
-* Improves image quality for analysis
+  * Reflection ✨
+
+📊 Progress:
+
+```
+████████████░░░ 75%
+```
+
+</details>
 
 ---
 
-### 🟧 3. Feature Extraction
+<details>
+<summary>🟧 Feature Extraction</summary>
 
-Based on **ABCD Rule**:
+ABCD Rule:
 
 * 🔺 Asymmetry
 * 🔳 Border
 * 🎨 Color
 * 📏 Diameter
 
-- Texture features:
+- Texture:
 
-* LBP (Local Binary Patterns)
-* GLCM (Gray-Level Co-occurrence Matrix)
+* LBP
+* GLCM
+
+📊 Progress:
+
+```
+███████████░░░░ 70%
+```
+
+</details>
 
 ---
 
-### 🟥 4. Classification
+<details>
+<summary>🟥 Classification</summary>
 
 * Predicts:
 
   * ✅ Benign
   * ❌ Malignant
-* Uses ML / DL models
-* Outputs:
+
+* Metrics:
 
   * Accuracy
   * Precision
   * Recall
   * F1-score
 
+📊 Progress:
+
+```
+██████████████░ 85%
+```
+
+</details>
+
 ---
 
 ## 🛠️ Technologies Used
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python"/>
-  <img src="https://img.shields.io/badge/OpenCV-Image%20Processing-green?style=for-the-badge&logo=opencv"/>
-  <img src="https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange?style=for-the-badge&logo=tensorflow"/>
-  <img src="https://img.shields.io/badge/PyTorch-AI-red?style=for-the-badge&logo=pytorch"/>
-  <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Python-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/OpenCV-green?style=for-the-badge&logo=opencv"/>
+  <img src="https://img.shields.io/badge/TensorFlow-orange?style=for-the-badge&logo=tensorflow"/>
+  <img src="https://img.shields.io/badge/PyTorch-red?style=for-the-badge&logo=pytorch"/>
 </p>
 
 ---
 
 ## 🎯 Why This Project Matters
 
-🧠 Early detection = higher survival rates
-⚡ Faster diagnosis
-🤖 AI-assisted medical support
-
----
-
-## 👨‍🎓 About
-
-This project was developed as a **graduation project** in:
-
-* Medical Image Processing
-* Computer Vision
-* Artificial Intelligence
+* 🧠 Early detection saves lives
+* ⚡ Faster diagnosis
+* 🤖 AI in healthcare
 
 ---
 
@@ -174,7 +199,7 @@ This project was developed as a **graduation project** in:
 
 If you like this project:
 
-* ⭐ Star the repo
+* ⭐ Star it
 * 🍴 Fork it
 * 📢 Share it
 
@@ -182,4 +207,4 @@ If you like this project:
 
 ## 📄 License
 
-This project is for academic and educational use only.
+Academic use only.
