@@ -9,18 +9,8 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C2FF&center=true&vCenter=true&width=500&lines=Welcome+to+our+Graduation+Project!;AI+for+Skin+Cancer+Detection;From+Image+→+Diagnosis;Built+with+Computer+Vision" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=500&lines=Welcome+to+our+Graduation+Project!;AI+for+Skin+Cancer+Detection;From+Image+→+Diagnosis;Computer+Vision+in+Healthcare" />
 </p>
-
----
-
-## 📌 Quick Navigation
-
-* [🚀 Welcome](#-welcome)
-* [🧠 Pipeline](#-pipeline-architecture)
-* [📁 Structure](#-project-structure)
-* [⚙️ Modules](#️-system-modules)
-* [🛠️ Tech](#️-technologies-used)
 
 ---
 
@@ -28,30 +18,16 @@
 
 ✨ **Welcome to our Graduation Project repository!**
 
-This project builds a **complete AI pipeline** for detecting skin cancer from images.
+This project implements a complete pipeline for **skin cancer detection using AI**.
 
-> 💡 *Goal: Help early diagnosis using AI.*
+> 💡 *Goal: Assist early diagnosis using artificial intelligence.*
 
 ---
 
-## 🧠 Pipeline Architecture
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Image-Input-lightgrey?style=for-the-badge"/>
-  →
-  <img src="https://img.shields.io/badge/Segmentation-blue?style=for-the-badge"/>
-  →
-  <img src="https://img.shields.io/badge/Cleaning-green?style=for-the-badge"/>
-  →
-  <img src="https://img.shields.io/badge/Features-orange?style=for-the-badge"/>
-  →
-  <img src="https://img.shields.io/badge/Classification-red?style=for-the-badge"/>
-  →
-  <img src="https://img.shields.io/badge/Diagnosis-black?style=for-the-badge"/>
-</p>
+## 🧠 Pipeline
 
 ```
-🖼️ → ✂️ → 🧹 → 📊 → 🤖 → 📋
+🖼️ Image → ✂️ Segmentation → 🧹 Cleaning → 📊 Feature Extraction → 🤖 Classification → 📋 Result
 ```
 
 ---
@@ -59,8 +35,7 @@ This project builds a **complete AI pipeline** for detecting skin cancer from im
 ## 📁 Project Structure
 
 ```bash
-skin-cancer-detection/
-│
+.
 ├── segmentation/
 │   └── segmentation.py
 │
@@ -84,18 +59,8 @@ skin-cancer-detection/
 <summary>🟦 Segmentation</summary>
 
 * Detects lesion boundaries
-* Separates lesion from skin
-* Methods:
-
-  * Thresholding
-  * Contours
-  * U-Net
-
-📊 Progress:
-
-```
-██████████░░░░░░ 60%
-```
+* Separates lesion from surrounding skin
+* Uses image processing / deep learning methods
 
 </details>
 
@@ -104,17 +69,8 @@ skin-cancer-detection/
 <details>
 <summary>🟩 Cleaning</summary>
 
-* Removes:
-
-  * Hair 🧵
-  * Noise ⚡
-  * Reflection ✨
-
-📊 Progress:
-
-```
-████████████░░░ 75%
-```
+* Removes noise ⚡
+* Enhances image quality for analysis
 
 </details>
 
@@ -123,23 +79,17 @@ skin-cancer-detection/
 <details>
 <summary>🟧 Feature Extraction</summary>
 
-ABCD Rule:
+Based on **ABCD Rule**:
 
 * 🔺 Asymmetry
 * 🔳 Border
 * 🎨 Color
 * 📏 Diameter
 
-- Texture:
+Additional texture features:
 
 * LBP
 * GLCM
-
-📊 Progress:
-
-```
-███████████░░░░ 70%
-```
 
 </details>
 
@@ -153,18 +103,12 @@ ABCD Rule:
   * ✅ Benign
   * ❌ Malignant
 
-* Metrics:
+* Evaluated using:
 
   * Accuracy
   * Precision
   * Recall
   * F1-score
-
-📊 Progress:
-
-```
-██████████████░ 85%
-```
 
 </details>
 
@@ -185,23 +129,13 @@ ABCD Rule:
 
 * 🧠 Early detection saves lives
 * ⚡ Faster diagnosis
-* 🤖 AI in healthcare
+* 🤖 AI-powered healthcare support
 
 ---
 
 ## 💬 Final Message
 
 > 🧬 *“Fighting skin cancer with the power of pixels and AI.”*
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-* ⭐ Star it
-* 🍴 Fork it
-* 📢 Share it
 
 ---
 
