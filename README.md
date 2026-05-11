@@ -1,122 +1,185 @@
-# Graduation_Project
-# 🔬 Skin Cancer Detection — Automated Lesion Segmentation & Classification
+# 🎓 Graduation Project
 
-> A deep learning pipeline for the automated detection and classification of skin cancer lesions from dermoscopic images.
+<h1 align="center">
+  🔬 Skin Cancer Detection
+</h1>
+
+<p align="center">
+  <b>Automated Lesion Segmentation & Classification using AI</b>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00C2FF&center=true&vCenter=true&width=500&lines=Welcome+to+our+Graduation+Project!;AI+for+Skin+Cancer+Detection;From+Image+→+Diagnosis;Built+with+Computer+Vision+%F0%9F%94%AC" />
+</p>
+
+---
+
+## 🚀 Welcome
+
+✨ **Welcome to our Graduation Project repository!**
+
+This project presents a **complete AI-powered pipeline** for detecting skin cancer from dermoscopic images.
+
+💡 Our goal:
+
+> Use **Artificial Intelligence** to assist in **early diagnosis** and potentially save lives.
 
 ---
 
 ## 📌 Project Overview
 
-Skin cancer is among the most common and dangerous forms of cancer worldwide. Early and accurate detection is critical for patient survival. This project presents a **complete end-to-end pipeline** that processes raw dermoscopic images through four intelligent stages — from raw image segmentation all the way to final cancer classification.
+Skin cancer is one of the most common and dangerous diseases worldwide.
 
-This work was developed as a graduation project and demonstrates practical application of computer vision and machine learning techniques in the medical imaging domain.
+This system processes an image through **4 intelligent stages**:
+
+➡️ From raw image
+➡️ To cleaned lesion
+➡️ To extracted features
+➡️ To final diagnosis
 
 ---
 
 ## 🧠 Pipeline Architecture
 
+<p align="center">
+  <img src="https://img.shields.io/badge/STEP%201-Segmentation-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/STEP%202-Cleaning-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/STEP%203-Feature%20Extraction-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/STEP%204-Classification-red?style=for-the-badge"/>
+</p>
+
 ```
-Raw Dermoscopic Image
-        │
-        ▼
-┌─────────────────────┐
-│   1. Segmentation   │  ← Isolates the lesion from healthy skin
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│   2. Cleaning       │  ← Removes artifacts, hair, noise
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ 3. Feature Extract. │  ← Extracts shape, color & texture features
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│  4. Classification  │  ← Predicts benign vs. malignant
-└─────────────────────┘
-        │
-        ▼
-   Diagnosis Output
+🖼️ Image → ✂️ Segmentation → 🧹 Cleaning → 📊 Features → 🤖 Classification → 📋 Result
 ```
 
 ---
 
-## 📁 Repository Structure
+## 📁 Project Structure
 
-```
+```bash
 skin-cancer-detection/
 │
-├── 1_segmentation/
-│   └── segmentation.py         # Lesion boundary detection
+├── 1_segmentation/          # Lesion detection
+│   └── segmentation.py
 │
-├── 2_cleaning/
-│   └── cleaning.py             # Preprocessing & artifact removal
+├── 2_cleaning/              # Noise & artifact removal
+│   └── cleaning.py
 │
-├── 3_feature_extraction/
-│   └── feature_extraction.py   # ABCD features, texture, color
+├── 3_feature_extraction/    # ABCD + texture features
+│   └── feature_extraction.py
 │
-├── 4_classification/
-│   └── classification.py       # ML/DL classification model
+├── 4_classification/        # ML/DL model
+│   └── classification.py
 │
-├── requirements.txt            # Python dependencies
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## ⚙️ Modules
+## ⚙️ System Modules
 
-### 1 — Segmentation
-Detects and isolates the skin lesion region from the surrounding healthy tissue using image processing techniques such as thresholding, contour detection, or deep segmentation models (e.g. U-Net). Produces a binary mask of the lesion area.
+### 🟦 1. Segmentation
 
-### 2 — Cleaning
-Prepares the segmented image for analysis by removing noise, hair artifacts, reflections, and other dermoscopic-specific distortions. Applies filters and morphological operations to enhance image quality.
+* Detects lesion boundaries
+* Separates cancer area from healthy skin
+* Techniques:
 
-### 3 — Feature Extraction
-Extracts clinically meaningful features from the cleaned lesion image, inspired by the **ABCD dermatology rule**:
-- **A**symmetry — shape irregularity
-- **B**order — smoothness vs. jaggedness
-- **C**olor — color variation and distribution
-- **D**iameter — size estimation
+  * Thresholding
+  * Contours
+  * Deep Learning (U-Net)
 
-Additional texture features are extracted using methods like LBP (Local Binary Patterns) or GLCM (Gray-Level Co-occurrence Matrix).
+---
 
-### 4 — Classification
-Feeds the extracted features into a trained machine learning or deep learning model to predict whether a lesion is **benign** or **malignant**. Includes model evaluation metrics such as accuracy, precision, recall, and F1-score.
+### 🟩 2. Cleaning
+
+* Removes:
+
+  * Hair 🧵
+  * Noise ⚡
+  * Reflections ✨
+* Improves image quality for analysis
+
+---
+
+### 🟧 3. Feature Extraction
+
+Based on **ABCD Rule**:
+
+* 🔺 Asymmetry
+* 🔳 Border
+* 🎨 Color
+* 📏 Diameter
+
+- Texture features:
+
+* LBP (Local Binary Patterns)
+* GLCM (Gray-Level Co-occurrence Matrix)
+
+---
+
+### 🟥 4. Classification
+
+* Predicts:
+
+  * ✅ Benign
+  * ❌ Malignant
+* Uses ML / DL models
+* Outputs:
+
+  * Accuracy
+  * Precision
+  * Recall
+  * F1-score
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Category | Tools |
-|---|---|
-| Language | Python 3.x |
-| Image Processing | OpenCV, Scikit-Image |
-| Machine Learning | Scikit-learn, TensorFlow / PyTorch |
-| Data Handling | NumPy, Pandas |
-| Visualization | Matplotlib, Seaborn |
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/OpenCV-Image%20Processing-green?style=for-the-badge&logo=opencv"/>
+  <img src="https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange?style=for-the-badge&logo=tensorflow"/>
+  <img src="https://img.shields.io/badge/PyTorch-AI-red?style=for-the-badge&logo=pytorch"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-yellow?style=for-the-badge"/>
+</p>
 
 ---
 
-## 👋 Welcome
+## 🎯 Why This Project Matters
 
-Welcome to the source code repository for our graduation project! This repo contains the four core code modules of our skin cancer detection pipeline. Each module corresponds to a stage in the processing pipeline and can be explored independently.
-
-If you're reviewing this work — thank you for your time. Every line of code here represents our effort to apply intelligent technology to a real-world medical challenge that affects millions of people.
+🧠 Early detection = higher survival rates
+⚡ Faster diagnosis
+🤖 AI-assisted medical support
 
 ---
 
 ## 👨‍🎓 About
 
-This project was developed as a **graduation project** in the field of medical image analysis and computer vision.
+This project was developed as a **graduation project** in:
 
-> *"Bringing intelligent tools to the fight against skin cancer — one pixel at a time."*
+* Medical Image Processing
+* Computer Vision
+* Artificial Intelligence
+
+---
+
+## 💬 Final Message
+
+> 🧬 *“Fighting skin cancer with the power of pixels and AI.”*
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star the repo
+* 🍴 Fork it
+* 📢 Share it
 
 ---
 
 ## 📄 License
 
-This project is for academic and educational purposes.
+This project is for academic and educational use only.
