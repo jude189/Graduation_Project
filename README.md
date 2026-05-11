@@ -46,7 +46,7 @@ That's it. Raw image in → intelligent diagnosis out.
 ## 📁 What's in the Repo?
 
 ```
-skin-cancer-detection/
+main/
 │
 ├── 1_segmentation/
 │   └── segmentation.py         # Finds the lesion boundary
