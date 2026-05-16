@@ -52,7 +52,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 IMG_SIZE        = (384, 384)
 BATCH_SIZE      = 8
-EPOCHS          = 50
+EPOCHS          = 80
 LR              = 3e-4
 ENCODER_LR_MULT = 0.1
 WEIGHT_DECAY    = 1e-4
