@@ -12,7 +12,7 @@ A deep learning pipeline for the automated detection and classification of skin 
 
 ---
 
-## 🤔 So... What Does This Thing Actually Do?
+## 🤔 So.. What Does This Thing Actually Do?
 
 Imagine you're a doctor looking at a suspicious mole. You take a close-up dermoscopic photo. Now what? Our pipeline takes that image and runs it through 4 smart stages to give you a diagnosis:
 
